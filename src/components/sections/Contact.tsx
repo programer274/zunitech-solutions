@@ -4,7 +4,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import { brand } from '@/data';
 import { contactSchema, type ContactFormData } from '@/lib/validations';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { Linkedin, Mail, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -12,7 +12,6 @@ const contactItems = [
   { icon: MessageCircle, label: 'WhatsApp', value: brand.whatsapp, href: brand.whatsappLink },
   { icon: Mail, label: 'Email', value: brand.email, href: `mailto:${brand.email}` },
   { icon: Linkedin, label: 'LinkedIn', value: brand.linkedin, href: brand.linkedinUrl },
-  { icon: Github, label: 'GitHub', value: brand.github, href: brand.githubUrl },
 ];
 
 const inputClass =

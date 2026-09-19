@@ -352,10 +352,9 @@ export const brand = {
   email: 'hello@zunitech.com',
   whatsapp: '+92 307 3213936',
   whatsappLink: 'https://wa.me/923073213936',
-  linkedin: 'linkedin.com/in/zuni',
-  linkedinUrl: 'https://linkedin.com/in/zuni',
-  github: 'github.com/zunitech',
-  githubUrl: 'https://github.com/zunitech',
+  linkedin: 'linkedin.com/in/muhammad-zain-ul-abideen-35120b2b7',
+  linkedinUrl:
+    'https://www.linkedin.com/in/muhammad-zain-ul-abideen-35120b2b7?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   hours: 'Available Mon–Sat, 9am–6pm PKT',
 };
 

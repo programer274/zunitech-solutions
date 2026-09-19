@@ -1,5 +1,5 @@
 import { brand } from '@/data';
-import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { Linkedin, Mail, MessageCircle } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const quickLinks = [
@@ -59,15 +59,6 @@ export default function Footer() {
                 className={socialIconClass}
               >
                 <Linkedin size={18} />
-              </a>
-              <a
-                href={brand.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className={socialIconClass}
-              >
-                <Github size={18} />
               </a>
               <a
                 href={brand.whatsappLink}
