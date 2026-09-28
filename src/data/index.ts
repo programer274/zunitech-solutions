@@ -349,7 +349,7 @@ export const brand = {
     "Hi, I'm Zuni, a Laravel developer and founder of Zunitech Solutions. I help businesses automate operations and scale using custom web applications built with Laravel, PHP, MySQL, and modern frontend technologies.",
   founderBioExtended:
     'With years of hands-on experience building production-grade applications, I combine deep Laravel expertise with a product-minded approach. Every project starts with understanding your business — not just your tech stack.',
-  email: 'hello@zunitech.com',
+  email: 'hello.zunitech@zunitechsolutions.online',
   whatsapp: '+92 307 3213936',
   whatsappLink: 'https://wa.me/923073213936',
   linkedin: 'linkedin.com/in/muhammad-zain-ul-abideen-35120b2b7',
