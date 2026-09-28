@@ -23,19 +23,42 @@ interface ContactProps {
 
 export default function Contact({ showMap = false }: ContactProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     mode: 'onBlur',
   });
 
-  const onSubmit = async (_data: ContactFormData) => {
-    await new Promise((r) => setTimeout(r, 800));
-    setSubmitted(true);
+  const onSubmit = async (data: ContactFormData) => {
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Unable to send your message right now. Please try again.');
+      }
+
+      reset();
+      setSubmitted(true);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Unable to send your message right now. Please try again.';
+      setSubmitError(message);
+    }
   };
 
   return (
@@ -100,6 +123,12 @@ export default function Contact({ showMap = false }: ContactProps) {
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+                {submitError && (
+                  <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+                    {submitError}
+                  </div>
+                )}
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1.5">
                     Name *
