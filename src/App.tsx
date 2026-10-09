@@ -9,6 +9,7 @@ const AboutPage = lazy(() => import('@/pages/AboutPage'));
 const ServicesPage = lazy(() => import('@/pages/ServicesPage'));
 const PortfolioPage = lazy(() => import('@/pages/PortfolioPage'));
 const ContactPage = lazy(() => import('@/pages/ContactPage'));
+const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage'));
 
 function PageLoader() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             </Routes>
           </Suspense>
         </Layout>
