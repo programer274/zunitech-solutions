@@ -128,6 +128,9 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-brand-500/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© 2025 Zunitech Solutions. All rights reserved.</p>
+          <Link to="/privacy-policy" className="hover:text-brand-400 transition-colors">
+            Privacy Policy
+          </Link>
           <p>Built with ❤️ using Laravel & React</p>
         </div>
       </div>
